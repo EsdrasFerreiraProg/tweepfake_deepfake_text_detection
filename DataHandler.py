@@ -7,6 +7,7 @@ class DataHandler:
         pass
 
     def readCSVData(self, fname, sep=";"):
+        print(fname)
         df = pd.read_csv(fname, sep=sep)
         return df
 

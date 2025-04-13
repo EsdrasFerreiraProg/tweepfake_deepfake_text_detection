@@ -10,3 +10,16 @@ In order to create a solid baseline for detection techniques on the proposed dat
 
 
 *NOTE*: All the experiments have been performed using Google Colaboratory platform and Google Drive integration, if you want to run the scripts under different conditions you need to change the code accordingly.
+
+**Added by @EsdrasFerreiraProg
+
+1. Install Python 3.6.8 - https://www.python.org/downloads/release/python-368/
+2. Create a virtual environment with Python 3.6.8 - python.exe -m venv venv // maybe other commands will be necessary
+3. Activate the venv - .\venv\Scripts\activate
+4. Verify if pip is installed - pip --version
+4.1 - If it is not, do 
+python -m ensurepip --upgrade
+python -m pip install --upgrade pip
+5. Install the requirements file called requirements-char-cnn.txt
+6. Run this command, it will fix some compatibilities problems: pip install notebook==6.4.0 jinja2==2.11.3 nbclient==0.5.9 nbconvert==6.0.7
+7. Now install jupyter - jupyter notebook

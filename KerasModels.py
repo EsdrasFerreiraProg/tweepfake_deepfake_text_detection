@@ -3,7 +3,6 @@ import os
 import numpy as np
 import pandas as pd
 
-
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 
@@ -14,9 +13,6 @@ from keras.models import Model
 import pandas as pd
 from sklearn.metrics import classification_report
 import pickle
-
-
-
 
 def generateExpData(df, tokenizer = None, textField = "text", labelField = "account.type"):
     trainingData = df[textField].values
