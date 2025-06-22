@@ -14,12 +14,23 @@ In order to create a solid baseline for detection techniques on the proposed dat
 **Added by @EsdrasFerreiraProg
 
 1. Install Python 3.6.8 - https://www.python.org/downloads/release/python-368/
-2. Create a virtual environment with Python 3.6.8 - python.exe -m venv venv // maybe other commands will be necessary
+2. Create a virtual environment with Python 3.6.8 - py -3.6 -m venv venv // maybe other commands will be necessary
 3. Activate the venv - .\venv\Scripts\activate
 4. Verify if pip is installed - pip --version
 4.1 - If it is not, do 
 python -m ensurepip --upgrade
 python -m pip install --upgrade pip
 5. Install the requirements file called requirements-char-cnn.txt
-6. Run this command, it will fix some compatibilities problems: pip install notebook==6.4.0 jinja2==2.11.3 nbclient==0.5.9 nbconvert==6.0.7
-7. Now install jupyter - jupyter notebook
+5.1 - If the step 5 does not work, install all of them separately
+6. Now install and run jupyter - jupyter notebook. Obs: remember that you have to execute a jupyter notebook to use the venv;
+7. Run this command, it will fix some compatibilities problems: pip install notebook==6.4.0 jinja2==2.11.3 nbclient==0.5.9 nbconvert==6.0.7
+8. If you are not able to import KerasModel, do this:
+
+import sys
+sys.path.append("D:\tweepfake_deepfake_text_detection")
+
+from KerasModels import generateExpData
+
+9. If you receive keras errors, use this: pip install --upgrade keras
+9.1 - Keras directly was replaced by tensorflow.keras.xxxxx
+10. resultsDir = "/data/results" was replaced by resultsDir = "./data/results"

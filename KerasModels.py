@@ -3,15 +3,16 @@ import os
 import numpy as np
 import pandas as pd
 
-from keras.preprocessing.text import Tokenizer
-from keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-from keras.layers import Input, Embedding, Activation, Flatten, Dense, GlobalMaxPooling1D
-from keras.layers import Conv1D, MaxPooling1D, Dropout, concatenate
-from keras.layers import CuDNNLSTM, GRU, Bidirectional
-from keras.models import Model
+from tensorflow.keras.layers import Input, Embedding, Activation, Flatten, Dense, GlobalMaxPooling1D
+from tensorflow.keras.layers import Conv1D, MaxPooling1D, Dropout, concatenate
+from tensorflow.keras.layers import LSTM, GRU, Bidirectional
+from tensorflow.keras.models import Model
 import pandas as pd
 from sklearn.metrics import classification_report
+
 import pickle
 
 def generateExpData(df, tokenizer = None, textField = "text", labelField = "account.type"):
